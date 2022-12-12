@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 export default class FashionPage extends Component {
   constructor() {
@@ -20,17 +21,14 @@ export default class FashionPage extends Component {
 
   render() {
     return (
-      <div class="gap-8 columns-3">
-  <img class="w-full aspect-video mb-6" src="https://picsum.photos/500/300?random=1" />
-  <img class="w-full aspect-square mb-6" src="https://picsum.photos/500/300?random=2" />
-  <img class="w-full aspect-square mb-6" src="https://picsum.photos/500/300?random=3" />
-  <img class="w-full aspect-square mb-6" src="https://picsum.photos/500/300?random=4" />
-  <img class="w-full aspect-video mb-6" src="https://picsum.photos/500/300?random=5" />
-  <img class="w-full aspect-video mb-6" src="https://picsum.photos/500/300?random=6" />
-  <img class="w-full aspect-square mb-6" src="https://picsum.photos/500/300?random=7" />
-  <img class="w-full aspect-video mb-6" src="https://picsum.photos/500/300?random=8" />
-  <img class="w-full aspect-square mb-6" src="https://picsum.photos/500/300?random=9" />
-</div>
+      <ResponsiveMasonry
+      columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+      <Masonry columnsCount={3} gutter="10px">
+                {this.state.items.map((item) => (
+                    <ImageContent item = {item} key = {item.id} />
+                ))}
+            </Masonry>
+            </ResponsiveMasonry>
     );
   }
 }
@@ -38,7 +36,7 @@ export default class FashionPage extends Component {
 const ImageContent = ({ item }) => {
   return (
     <>
-      <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 -mr-96">
+      <div>
         <div className="rounded overflow-hidden shadow-lg">
           <img className="w-full " src={item.images} alt="Mountain" />
           <div className="px-6 py-4">

@@ -1,10 +1,14 @@
 import React from "react";
+import AboutForm from "../components/about-form";
+import CardText from "../components/card-text";
 
 const About = () => {
   return (
-    <section className="body">
-      <h1>about</h1>
-    </section>
+    <>
+    <CardText />
+    <AboutForm />
+    </>
+
   );
 };
 

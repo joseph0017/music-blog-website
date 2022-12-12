@@ -7,23 +7,20 @@ import { FaTwitter } from "react-icons/fa";
 const Foooter = () => {
   return (
     <>
-      <div className=" text-white items-center text-4xl bottom-auto text-green-300 text-6xl font-bold bg-black h-24 italic">
-        stay updated
-      </div>
       <div className="flex flex-row  items-center bg-black text-white justify-center">
         <Link
           className="p-4 hover:text-green-300 text-base "
-          to="www.instagram.com"
+          to="/music"
         >
           <FaInstagram />
         </Link>
         <Link
           className="p-4 hover:text-green-300 text-base"
-          to="www.facebook.com"
+          to="/music"
         >
           <FaFacebook />
         </Link>
-        <Link className="p-4 hover:text-green-300 text-base" to="/">
+        <Link className="p-4 hover:text-green-300 text-base" to="/music">
           <FaTwitter />
         </Link>
       </div>
@@ -36,4 +33,4 @@ const Foooter = () => {
 
 export default Foooter;
 
-/**© */
+

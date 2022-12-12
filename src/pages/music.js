@@ -1,15 +1,7 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlay,
-  faPause,
-  faForward,
-  faBackward,
-} from "@fortawesome/free-solid-svg-icons";
-
-import Player from '@madzadev/audio-player'
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
+import CardMusic from "../components/card-music";
 
 // App
 export default class MusicPage extends Component {
@@ -32,10 +24,14 @@ export default class MusicPage extends Component {
 
   render() {
     return (
-      <div>    
-        <ReactJkMusicPlayer audioLists = {this.state.items} autoPlay = {false} mode = "full"
-        showMediaSession />     
-      </div>
+      <>
+      <br />
+      <CardMusic />
+        <div className = "" >    
+          <ReactJkMusicPlayer audioLists = {this.state.items} autoPlay = {false} mode = "full"
+          showMediaSession />     
+        </div>
+      </>
     );
   }
 }
