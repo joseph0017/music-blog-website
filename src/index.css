@@ -11,6 +11,7 @@
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .backdrop img{
@@ -20,4 +21,5 @@
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+  z-index: 1;
 }

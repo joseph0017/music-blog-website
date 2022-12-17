@@ -4,7 +4,7 @@ import 'react-jinke-music-player/assets/index.css'
 import CardMusic from "../components/card-music";
 
 // App
-export default class MusicPage extends Component {
+export default class Music extends Component {
   constructor() {
     super();
 
@@ -27,7 +27,7 @@ export default class MusicPage extends Component {
       <>
       <br />
       <CardMusic />
-        <div className = "" >    
+        <div>    
           <ReactJkMusicPlayer audioLists = {this.state.items} autoPlay = {false} mode = "full"
           showMediaSession />     
         </div>
